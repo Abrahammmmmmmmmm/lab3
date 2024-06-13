@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员控制台</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>管理员控制台</h1>
+    <button onclick="addUser()">添加用户</button>
+    <input type="text" id="search-query" placeholder="搜索用户名或角色">
+    <button onclick="searchUser()">搜索</button>
+    <div id="user-detail"></div>
+    <table id="users-table">
+        <thead>
+        <tr>
+            <th>用户名</th>
+            <th>角色</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 动态生成用户行 -->
+        </tbody>
+    </table>
+    <div id="pagination"></div>
+    <button onclick="exportData()">导出数据</button>
+    <input type="file" id="file-input" onchange="importData()">
+    <div id="import-status"></div>
+    <button onclick="logout()" class="logout-button">退出登录</button>
+</div>
+<script src="functions.js"></script>
+</body>
+</html>
